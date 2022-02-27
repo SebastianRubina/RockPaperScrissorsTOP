@@ -68,8 +68,38 @@ let winnerMsg = document.querySelector('.winner');
 let playerChoice = document.querySelector('.playerChoice');
 let computerChoice = document.querySelector('.computerChoice');
 let buttons = document.querySelectorAll('button');
+let pScore = document.querySelector('.playerScore');
+let cScore = document.querySelector('.computerScore');
+
+// Timer
+let timer = document.querySelector('.timer');
+let t;
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+timer.addEventListener('click', startTimer);
+
+async function startTimer() {
+  for (t = 10; t >= 0; t--) {
+    timer.innerHTML = `${t}`;
+    console.log("worked");
+    await sleep(1000);
+  }
+  timer.innerHTML = 'ALE ES GAY AF LEL NICE RAGE'
+}
 
 
+let playerScore = 0;
+let computerScore = 0;
+
+function displayScore(playerScore, computerScore) {
+  pScore.innerHTML = `${playerScore}`;
+  cScore.innerHTML = `${computerScore}`;
+}
+
+displayScore(playerScore, computerScore);
 buttons = document.addEventListener('click', testFun);
 
 function testFun(e) {
@@ -77,8 +107,8 @@ function testFun(e) {
   let computerSelection = computerPlay();
   console.log(playerSelection);
 
-  playerChoice.innerHTML = `Player picked: ${playerSelection}`;
-  computerChoice.innerHTML = `Computer picked: ${computerSelection}`;
+  playerChoice.innerHTML = `${playerSelection}`;
+  computerChoice.innerHTML = `${computerSelection}`;
 
   let winner = playRound(playerSelection, computerSelection);
   if (winner != 'tie') {
@@ -86,5 +116,11 @@ function testFun(e) {
   } else {
     winnerMsg.innerHTML = 'Tie! Try again!';
   }
-  console.log(winnerMsg);
+
+  if (winner == 'player') {
+    playerScore++;
+  } else if (winner == 'computer') {
+    computerScore++
+  }
+  displayScore(playerScore, computerScore);
 }

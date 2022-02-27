@@ -6,18 +6,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/js.js" defer></script>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
   <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
+  <div class="scoreText">Scores</div>
+  <div class="scores">
+    <div class="scoreGroup">
+      <div class="scoreIdentifier">Player</div>
+      <div class="playerScore score"></div>
+    </div>
+    <div class="scoreGroup">
+      <div class="scoreIdentifier">Computer</div>
+      <div class="computerScore score"></div>
+    </div>
+  </div>
   <div class="playerButtons">
     <button class="prock" value="rock">Rock</button>
     <button class="ppaper" value="paper">Paper</button>
     <button class="pscissors" value="scissors">Scissors</button>
   </div>
-  <div class="playerChoice"></div>
-  <div class="computerChoice"></div>
+  <div class="picks">
+    <div class="pick">
+      <div class="">Player picked</div>
+      <div class="playerChoice"></div>
+    </div>
+    <div class="pick">
+      <div class="">Computer picked</div>
+      <div class="computerChoice"></div>
+    </div>
+  </div>
   <div class="winner"></div>
+  <div class="timer">Click me!</div>
 </body>
 
 </html>

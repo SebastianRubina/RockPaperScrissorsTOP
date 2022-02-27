@@ -1,0 +1,81 @@
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Rubik', sans-serif;
+  align-items: center;
+  color: #300;
+  gap: 36px;
+  background-color: #fffcf8;
+}
+
+.playerButtons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70vw;
+}
+
+.playerButtons button {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  min-width: 150px;
+  background: #3399cc;
+  padding: 15px 30px;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.playerButtons button:hover {
+  color: #3399cc;
+  background: none;
+  border: 3px solid #3399cc;
+  padding: 12px 27px;
+  transition: 200ms;
+}
+
+.scores {
+  display: flex;
+  padding: auto;
+  justify-content: space-around;
+  width: 70vw;
+}
+
+.scoreGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreIdentifier {
+  font-size: 36px;
+}
+
+.scoreText {
+  font-size: 48px;
+}
+
+.score {
+  font-size: 48px;
+}
+
+.picks {
+  display: flex;
+  width: 70vw;
+  justify-content: space-evenly;
+  font-size: 24px;
+}
+
+.pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winner {
+  font-size: 36px;
+}
+
+.scoreText {
+  border-bottom: 5px solid #cdb99c;
+}
