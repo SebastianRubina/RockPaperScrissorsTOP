@@ -87,7 +87,7 @@ async function startTimer() {
     console.log("worked");
     await sleep(1000);
   }
-  timer.innerHTML = 'ALE ES GAY AF LEL NICE RAGE'
+  timer.innerHTML = 'SANTIAGO ES UN NOOB Y NO SABE MANEJAR'
 }
 
 
@@ -100,7 +100,10 @@ function displayScore(playerScore, computerScore) {
 }
 
 displayScore(playerScore, computerScore);
-buttons = document.addEventListener('click', testFun);
+
+buttons.forEach(button => {
+  button.addEventListener('click', testFun);
+})
 
 function testFun(e) {
   let playerSelection = e.target.value;
