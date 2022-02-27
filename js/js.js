@@ -87,7 +87,7 @@ async function startTimer() {
     console.log("worked");
     await sleep(1000);
   }
-  timer.innerHTML = 'SANTIAGO ES UN NOOB Y NO SABE MANEJAR'
+  timer.innerHTML = 'Welcome :)'
 }
 
 
